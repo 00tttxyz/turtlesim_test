@@ -3,18 +3,18 @@
 #### ROS安装
 
 1.添加ROS软件源
-  `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
+    `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
 2.添加密钥
-  `sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80'--recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654`
+    `sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80'--recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654`
 3.安装ROS
-  `sudo apt update`  
-  `sudo apt install ros-noetic-desktop-full`
+    `sudo apt update`  
+    `sudo apt install ros-noetic-desktop-full`
 4.初始化rosdep
-  `sudo rosdep init`  
-  `rosdep update`
+    `sudo rosdep init`  
+    `rosdep update`
 5.设置环境变量
-  `echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc`  
-  `source ~/.bashrc`
+    `echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc`  
+    `source ~/.bashrc`
 
 #### 创建工作空间`mkdir -p catkin_ws/src`
 
