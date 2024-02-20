@@ -53,7 +53,7 @@
 
 `python3 my_broadcaster.py __name:=turtle1_tf_broadcaster /turtle1`
 
-`python3 my_broadcaster.py __name:=turtle1_tf_broadcaster /turtle1`
+`python3 my_broadcaster.py __name:=turtle2_tf_broadcaster /turtle2`
 
 `python3 my_listener.py`
 
