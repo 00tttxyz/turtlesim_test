@@ -35,10 +35,5 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 #### 运行
 
 ```
-roscore
-rosrun turtlesim turtlesim_node
-rosrun my_pkg my_listener.py
-rosrun my_pkg my_broadcaster.py __name:=turtle1_tf_broadcaster /turtle1 _turtle:=turtle1
-rosrun my_pkg my_broadcaster.py __name:=turtle2_tf_broadcaster /turtle2 _turtle:=turtle2
-rosrun turtlesim turtle_teleop_key
+roslaunch turtlesim_test test.launch
 ```
