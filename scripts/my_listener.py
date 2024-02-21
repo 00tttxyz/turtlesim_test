@@ -11,7 +11,7 @@ if __name__ == '__main__':
     # 初始化节点
     rospy.init_node('turtle_tf_listener')
     
-    # 在(4, 2, 0)创建第二只海龟
+    # 创建第二只海龟
     rospy.wait_for_service('spawn')
     spawner = rospy.ServiceProxy('spawn', turtlesim.srv.Spawn)
     spawner(4, 2, 0, 'turtle2')
