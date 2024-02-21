@@ -5,7 +5,7 @@
 #### ROS安装
 
 ```
-sudo sh -c 'echo deb httppackages.ros.orgrosubuntu $(lsb_release -sc) main  etcaptsources.list.dros-latest.list'
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt install curl
 wget http://packages.ros.org/ros.key
@@ -25,11 +25,11 @@ source ~/.bashrc
 ```
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 catkin_init_workspace
 git clone https://github.com/00tttxyz/turtlesim_test.git
 cd ..
 catkin_make
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
 #### 运行
