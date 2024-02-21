@@ -2,7 +2,11 @@
 <launch>
 	<node pkg="turtlesim" type="turtlesim_node" name="sim"></node>
 	<node pkg="turtlesim_test" type="my_listener.py" name="listener"></node>
-	<node pkg="turtlesim_test" type="my_broadcaster.py" name="broadcaster1" args="/turtle1 _turtle:=turtle1"></node>
-	<node pkg="turtlesim_test" type="my_broadcaster.py" name="broadcaster2" args="/turtle2 _turtle:=turtle2"></node>
+	<node pkg="turtlesim_test" type="my_broadcaster.py" name="broadcaster1">
+		<param name="turtle" value="turtle1"/>
+	</node>
+	<node pkg="turtlesim_test" type="my_broadcaster.py" name="broadcaster2">
+		<param name="turtle" value="turtle2"/>
+	</node>
 	<node pkg="turtlesim" type="turtle_teleop_key" name="key"></node>
 </launch>
