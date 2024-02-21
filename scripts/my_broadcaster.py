@@ -10,7 +10,7 @@ def handle_turtle_pose(msg, turtlename):
     # 创建tf广播器
     br = tf.TransformBroadcaster()
     
-    # 广播数据，平移：(x, y, z=0)、旋转(x=0, y=0, z)
+    # 广播数据
     br.sendTransform((msg.x, msg.y, 0),
                      tf.transformations.quaternion_from_euler(0, 0, msg.theta),
                      rospy.Time.now(),
